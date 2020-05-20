@@ -58,5 +58,5 @@ class TwoNumbersSumEqualTarget:
         self.write_result()
 
 
-task = TwoNumbersSumTask(input_file_path="input.txt", output_file_path="output.txt")
+task = TwoNumbersSumEqualTarget(input_file_path="input.txt", output_file_path="output.txt")
 task.run()
