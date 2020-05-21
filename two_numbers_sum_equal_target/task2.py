@@ -3,7 +3,7 @@ import string
 from enum import Enum
 
 
-def get_number_by_chars(s, sep=string.whitespace):
+def get_number_by_chars(s: str, sep=string.whitespace):
     word = []
 
     for char in s:
