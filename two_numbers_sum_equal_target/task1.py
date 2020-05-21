@@ -1,6 +1,7 @@
-from enum import Enum
-
+import itertools as it
 import typing
+
+from enum import Enum
 
 
 class SearchStatus(Enum):
@@ -38,15 +39,10 @@ class TwoNumbersSumEqualTarget:
             target = int(target)
             numbers = [int(x) for x in numbers_list.split() if 0 < int(x) <= target]
 
-            tmp_set = set()
-            for number in numbers:
-                print(number)
-                tmp = target - number
-                if tmp in tmp_set:
+            for seq in it.combinations(numbers, 2):
+                if sum(seq) == target:
                     self.__find_status = SearchStatus.FOUND
                     break
-                else:
-                    tmp_set.add(number)
 
         self.write_result()
 
